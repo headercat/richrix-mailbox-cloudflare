@@ -1,0 +1,16 @@
+{
+    "name": "richrix-mailbox-cloudflare",
+    "main": "src/index.ts",
+    // Set this to today's date
+    "compatibility_date": "2026-03-30",
+    "vars": {
+        "MAILBOX_ENDPOINT": "https://example.com/mailbox/inbound",
+    },
+    "secrets_store_secrets": [
+        {
+            "binding": "MAILBOX_SECRET",
+            "store_id": "richrix",
+            "secret_name": "mailbox-inbound-secret"
+        }
+    ]
+}

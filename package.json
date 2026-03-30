@@ -1,0 +1,25 @@
+{
+    "name": "richrix-mailbox-cloudflare",
+    "version": "1.0.0",
+    "private": true,
+    "cloudflare": {
+        "bindings": {
+            "MAILBOX_ENDPOINT": {
+                "description": "Rhymix 메일함 인바운드 엔드포인트 URL입니다. (예: `https://example.com/mailbox/inbound`)"
+            },
+            "MAILBOX_SECRET": {
+                "description": "인바운드 요청 서명에 사용되는 HMAC-SHA256 시크릿 키입니다. Rhymix 메일함 모듈 설정의 `inbound_secret` 값과 일치해야 합니다."
+            }
+        }
+    },
+    "scripts": {
+        "deploy": "wrangler deploy",
+        "dev": "wrangler dev",
+        "type-check": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "@cloudflare/workers-types": "^4.20250109.0",
+        "typescript": "^5.7.3",
+        "wrangler": "^3.109.3"
+    }
+}
